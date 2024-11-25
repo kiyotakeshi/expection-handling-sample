@@ -1,0 +1,8 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "3000:80"
+    volumes:
+      - ./src/main/resources/openapi/redoc.html:/usr/share/nginx/html/index.html
+      - ./src/main/resources/openapi/openapi.yml:/usr/share/nginx/html/openapi.yml
