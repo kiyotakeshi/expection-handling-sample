@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "b1a13510-3d69-4ae9-a90a-a852dc72f20d",
+		"name": "exception-handling",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8890557"
+	},
+	"item": [
+		{
+			"name": "localhost:18080/runtime-exception",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:18080/runtime-exception",
+					"host": [
+						"localhost"
+					],
+					"port": "18080",
+					"path": [
+						"runtime-exception"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:18080/tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{port}}/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:18080/tasks/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:18080/tasks/1",
+					"host": [
+						"localhost"
+					],
+					"port": "18080",
+					"path": [
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:18080/tasks/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:{{port}}/tasks/30f6a8c3-094c-4089-8ff9-fa70cfe73a52",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"tasks",
+						"30f6a8c3-094c-4089-8ff9-fa70cfe73a52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:18080/tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"01F8MECHZX3TBDSZ7XRADM79X1\",\n  \"title\": \"Implement new feature\",\n  \"description\": \"This task is to implement the new feature for our product.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{port}}/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:18080/tasks(validation error)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userId\": \"01F8MECHZX3TBDSZ7XRADM79X1\",\n  \"title\": \"aa\",\n  \"description\": \"over1000 characters......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:{{port}}/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "18080",
+			"type": "string"
+		}
+	]
+}

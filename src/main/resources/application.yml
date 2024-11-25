@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: exception-handling
+server:
+  port: 18080
+  error:
+    # デフォルトのエラーレスポンスに stacktrace を含めない
+    # https://docs.spring.io/spring-boot/reference/using/devtools.html#using.devtools.property-defaults の `server.error.include-stacktrace`
+#    include-stacktrace: never
+     include-stacktrace: always
+
+logging:
+  structured:
+    format:
+      console: ecs
