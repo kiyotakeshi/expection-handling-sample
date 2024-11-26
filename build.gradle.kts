@@ -27,7 +27,6 @@ repositories {
 
 idea.module {
 	generatedSourceDirs.addAll(listOf(
-		File("${project.rootDir}/src/main/jooq"),
 		File("${project.rootDir}/src/main/openapi"),
 	))
 }

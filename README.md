@@ -25,3 +25,13 @@ run
 ## Postman collection
 
 - [Postman collection](./postman/)
+
+## API schema
+
+run nginx container with ReDoc CDN
+
+```shell
+docker compose up -d
+```
+
+access: localhost:3000
